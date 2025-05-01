@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>No Credentials Needed</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="chamber">
-    <canvas id="geometry"></canvas>
-    <div id="phrase">ENTER</div>
-    <div id="message" class="hidden">this is not the beginning, only the remembering</div>
+  <!-- Initial Ring -->
+  <div id="portal">
+    <div id="glyph-ring"></div>
   </div>
+
+  <!-- Starfield activates after 'source' -->
+  <canvas id="starfield"></canvas>
+
+  <div id="cockpit-overlay">
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+  </div>
+  
+  <canvas id="warp-lines"></canvas>
+
+  <!-- Phrase appears after warp -->
+  <div id="phrase">This is not the beginning, only the remembering.</div>
+
+  <!-- Placeholder for future symbols -->
+  <div id="symbols">
+    <div class="symbol" data-realm="1" data-message="Seed of Will">&#x2726;</div> <!-- ✧ -->
+    <div class="symbol" data-realm="2" data-message="Echoes of Thought">&#9733;</div> <!-- ★ -->
+    <div class="symbol" data-realm="3" data-message="Memory Beyond Time">&#x2736;</div> <!-- ✶ -->
+  </div>
+  
+  <div id="symbol-whisper"></div>
+
   <script src="main.js"></script>
 </body>
 </html>
